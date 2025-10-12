@@ -290,7 +290,7 @@ if prompt := st.chat_input("Ask about Robin's projects, skills, or approach...")
         with st.spinner("Thinking..."):
             try:
                 response = client.chat.completions.create(
-                    model="llama-3.1-70b-versatile",
+                    model="llama-3.3-70b-versatile",
                     messages=[
                         {"role": "system", "content": context},
                         *[{"role": m["role"], "content": m["content"]} 
