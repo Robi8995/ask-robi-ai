@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import OpenAI
+from groq import Groq
 
 # Page configuration
 st.set_page_config(
@@ -39,12 +39,12 @@ st.markdown("""
 
 st.write("👋 Hi! I'm Robin's AI assistant. Ask me anything about his projects, skills, or approach to Business Analytics!")
 
-# Initialize OpenAI client
-if "OPENAI_API_KEY" not in st.secrets:
-    st.error("⚠️ Please add your OPENAI_API_KEY to Streamlit secrets to enable the chatbot.")
+# Initialize Groq client
+if "GROQ_API_KEY" not in st.secrets:
+    st.error("⚠️ Please add your GROQ_API_KEY to Streamlit secrets to enable the chatbot.")
     st.stop()
 
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 # Comprehensive context about Robin's projects
 context = """
@@ -290,7 +290,7 @@ if prompt := st.chat_input("Ask about Robin's projects, skills, or approach...")
         with st.spinner("Thinking..."):
             try:
                 response = client.chat.completions.create(
-                    model="gpt-4o-mini",
+                    model="llama-3.1-70b-versatile",
                     messages=[
                         {"role": "system", "content": context},
                         *[{"role": m["role"], "content": m["content"]} 
@@ -347,4 +347,4 @@ with st.sidebar:
     st.metric("Python Projects", "4")
     
     st.markdown("---")
-    st.caption("Built with ❤️ by Robin | Powered by OpenAI")
+    st.caption("Built with ❤️ by Robin | Powered by Groq (Llama 3)")
