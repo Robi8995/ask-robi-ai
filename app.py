@@ -1,3 +1,47 @@
+import streamlit as st
+from groq import Groq
+
+# Page configuration
+st.set_page_config(
+    page_title="Ask Robi.AI",
+    page_icon="🤖",
+    layout="centered"
+)
+
+# Custom CSS for branding
+st.markdown(
+    """
+    <style>
+    .main-header {
+        text-align: center;
+        padding: 1rem 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    .main-header h1 {
+        color: white;
+        margin: 0;
+    }
+    .main-header p {
+        color: #f0f0f0;
+        margin: 0.5rem 0 0 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Header
+st.markdown(
+    """
+    <div class="main-header">
+        <h1>🤖 Ask Robi.AI</h1>
+        <p>Your Interactive Guide to Robin's Business Analytics Portfolio</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # Comprehensive context about Robin's projects
 context = """
 You are an AI assistant representing Robin Jimmichan P, an aspiring Business Analyst with expertise in SQL, Excel, Power BI, and Python.
