@@ -645,7 +645,8 @@ When answering questions:
 - Use Robin's actual achievement numbers (92%, 17%, 60%, etc.) when relevant
 - Reference the AI assistant capability for even deeper methodology questions
 - Always tie analysis back to business decisions and strategic value
-"""import streamlit as st
+
+import streamlit as st
 from groq import Groq
 
 # Page configuration
