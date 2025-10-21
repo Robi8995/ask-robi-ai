@@ -153,7 +153,7 @@ KEY ACHIEVEMENTS:
    - Business Impact: Retention strategies reduced voluntary churn by 12%
    - Deliverable: Excel churn dashboard with interactive visuals and churn heatmaps
 
-===== SQL PROJECTS PORTFOLIO (5 Projects) =====
+===== SQL PROJECTS PORTFOLIO (6 Projects) =====
 
 7. **Inventory & Supplier Analysis** (Supply Chain & Retail)
    - Objective: Optimize procurement by identifying low-turnover inventory and high-performing suppliers
@@ -402,7 +402,7 @@ KEY ACHIEVEMENTS:
     - Business Impact: Cross-sell conversion increased by 11%, targeted retention campaigns, revenue optimization strategies, customer lifetime value increased
     - Deliverable: Market Basket Insights Report with Seaborn heatmaps, Excel dataset + Jupyter notebook
 
-===== POWER BI PROJECTS PORTFOLIO (4 Projects) =====
+===== POWER BI PROJECTS PORTFOLIO (5 Projects) =====
 
 17. **Retail Sales Dashboard**
     - Objective: Provide executive summary of retail store performance across time, geography, and product lines
