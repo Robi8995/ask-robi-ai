@@ -658,14 +658,24 @@ st.set_page_config(
 
 # Custom CSS for branding
 st.markdown("""
-    <style>
-    .main-header {
-        text-align: center;
-        padding: 1rem 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 10px;
-        margin-bottom: 2rem;
-    }
+<style>
+.main-header {
+    text-align: center;
+    padding: 1rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.main-header h1 {
+    color: white;
+    margin: 0;
+}
+.main-header p {
+    color: #f0f0f0;
+    margin: 0.5rem 0 0 0;
+}
+</style>
+""", unsafe_allow_html=True)
     .main-header h1 {
         color: white;
         margin: 0;
