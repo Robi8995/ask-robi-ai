@@ -645,9 +645,7 @@ When answering questions:
 - Use Robin's actual achievement numbers (92%, 17%, 60%, etc.) when relevant
 - Reference the AI assistant capability for even deeper methodology questions
 - Always tie analysis back to business decisions and strategic value
-"""
-
-import streamlit as st
+"""import streamlit as st
 from groq import Groq
 
 # Page configuration
@@ -763,7 +761,7 @@ KEY ACHIEVEMENTS:
 
 ===== SQL PROJECTS PORTFOLIO (6 Projects) =====
 
-7. **Inventory & Supplier Analysis** (Supply Chain & Retail)
+1. **Inventory & Supplier Analysis** (Supply Chain & Retail)
    - Database: inventory_db with suppliers and products tables
    - Schema: Foreign key relationships between suppliers and products
    - Analysis Performed:
@@ -816,7 +814,7 @@ KEY ACHIEVEMENTS:
    - SQL Techniques: CASE WHEN, GROUP BY, HAVING, aggregate functions
    - Business Impact: Enabled targeted marketing, improved customer service strategy
 
-5. **Telco Customer Churn Analysis** (Telecommunications)
+5. **Telco Customer Churn Analysis (SQL)** (Telecommunications)
    - Database: telco_db with contracts, plans, usage, and churn status
    - Analysis Performed:
      * JOIN operations to combine customer, plan, and usage data
@@ -830,7 +828,22 @@ KEY ACHIEVEMENTS:
    - SQL Techniques: JOINs, CASE statements, VIEWs, aggregate functions
    - Business Impact: Informed retention strategies, reduced churn through proactive interventions
 
-===== POWER BI PROJECTS PORTFOLIO (4 Projects) =====
+6. **Healthcare Claims Analysis** (Healthcare)
+   - Database: Healthcare Claims DB with Claims, Patients, Procedures tables
+   - Schema: Claim_ID, Provider_ID, Claim_Amount, Status, Diagnosis, Patient_ID, Procedure_Code
+   - Analysis Performed:
+     * Analyzed rejection reason frequency
+     * Average claim cost by diagnosis
+     * Fraud pattern identification using statistical anomaly detection
+   - SQL Techniques: COALESCE, CASE statements, Analytic Functions, Nested Subqueries, statistical aggregations
+   - Key Insights:
+     * 22% rejections due to incomplete documentation
+     * Cardiology claims had highest average payout
+     * 9% fraudulent claim patterns detected
+   - Business Impact: Fraud detection model, cost efficiency improvements
+   - Output: SQL report with fraud alerts and average claim trend visualization
+
+===== POWER BI PROJECTS PORTFOLIO (5 Projects) =====
 
 1. **Retail Sales Dashboard**
    - Objective: Visualize sales & profit trends across region and category
@@ -894,6 +907,25 @@ KEY ACHIEVEMENTS:
      * Drop-offs mainly occurred at cart stage (abandonment)
    - Business Impact: Identified cart abandonment issues, optimized checkout process
    - Skills: Funnel analysis, Conversion metrics, User journey mapping, DAX
+
+5. **Telco Customer Churn Dashboard**
+   - Objective: Visualize churn rates, segment risks, reveal top churn drivers for retention planning
+   - Dataset: Telco dataset with Demographics, Tenure, Charges, Contracts, service usage, churn flag
+   - Visualizations:
+     * KPI Cards: Churn Rate, Total Customers, ARPU (Average Revenue Per User)
+     * Bar Chart: Churn by Contract Type
+     * Pie Chart: Retention vs Churn distribution
+     * Line chart: Churn trend over time
+     * Slicers: Age, Plan, Region filtering
+     * Heatmap: Churn by region
+   - Key Insights:
+     * Short-term customers: 3× higher churn
+     * Two-year contracts: reduced churn by 27%
+     * Month-to-Month contracts: >40% churn rate
+     * Internet speed and billing cycle: direct impact on churn
+     * Complaints strongly correlate with churn risk
+   - Business Impact: Informed retention strategies, early churn detection, executive insights for proactive interventions
+   - Skills: DAX (COUNT, CALCULATE), Power Query, KPI visualization, Slicers, Drill-down, Churn analytics
 
 ===== PYTHON PROJECTS PORTFOLIO (4 Projects) =====
 
@@ -1026,8 +1058,8 @@ if "messages" not in st.session_state:
         "role": "assistant",
         "content": "👋 Hi there! I'm here to help you explore Robin's Business Analytics portfolio with **21 real-world projects**. You can ask me about:\n\n" +
                    "📊 **Excel Projects** (6 projects): Sales, Churn, Marketing, E-commerce, HR, Banking\n" +
-                   "🗃️ **SQL Projects** (5 projects): Inventory, Loan Risk, Healthcare, Bank Segmentation, Telco Churn\n" +
-                   "📈 **Power BI Projects** (4 projects): Retail Sales, Financial P&L, Customer 360, E-commerce Funnel\n" +
+                   "🗃️ **SQL Projects** (6 projects): Inventory, Loan Risk, Healthcare, Bank Segmentation, Telco Churn, Claims Analysis\n" +
+                   "📈 **Power BI Projects** (5 projects): Retail Sales, Financial P&L, Customer 360, E-commerce Funnel, Telco Churn\n" +
                    "🐍 **Python Projects** (4 projects): Sales Forecasting (92% accuracy), Basket Analysis, Airbnb, Healthcare\n" +
                    "💼 His approach to solving business problems\n" +
                    "🎯 Specific technical skills or measurable business impact\n" +
@@ -1110,8 +1142,8 @@ with st.sidebar:
     st.markdown("### 📊 Portfolio Stats")
     st.metric("Total Projects", "21")
     st.metric("Excel Projects", "6")
-    st.metric("SQL Projects", "5")
-    st.metric("Power BI Projects", "4")
+    st.metric("SQL Projects", "6")
+    st.metric("Power BI Projects", "5")
     st.metric("Python Projects", "4")
     st.metric("Industries Covered", "10")
     
